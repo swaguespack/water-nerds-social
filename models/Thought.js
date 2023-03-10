@@ -12,8 +12,6 @@ const reactionSchema = new Schema(
         reactionBody:{
             type: String,
             required: true,
-            trim: true,
-            minLength: 1,
             maxLength: 280
         },
         username: {
@@ -23,7 +21,7 @@ const reactionSchema = new Schema(
         createdAt:{
             type: Date,
             default: Date.now,
-            get: (createdAtVal) =>
+            get: createdAtVal =>
                 moment(createdAtVal).format("MMM DD, YYYY [at] hh:mm a")
         }
     },
