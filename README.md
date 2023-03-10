@@ -21,22 +21,17 @@ Install the following packages using `npm install`:
 
 ## Usage
 
-Once the dependencies are installed and the .env file is set up, follow this commands:
+Once the packages are installed, invoke the application by using the `npm start` command.
 
-1. `mysql -u root -p` - logs into MySQL
-2. `source db/schema.sql` - sources the schema
-3. `quit` - quits MySQL database
-4. `npm run seed` - runs the seed script
-5. `npm start` - starts the server
 
 ## Application Demo
 
-The following image captures the CMS-style Tech Blog Application:
+The following image captures the water-social network application in Insomnia:
 
-![cms tech blog application.](/public/images/mvc-demo.png)
+![social network web application in Insomnia.](/assets/water-social.png)
 
-Use the following link to find the deployed application on Heroku:
-https://tech-knowledge-y.herokuapp.com/ 
+Use the following link to find the application's walkthrough video:
+https://drive.google.com/file/d/19weZigFxZ45XUwOMAVbDwNSfrc0CIGXj/view 
 
 
 
