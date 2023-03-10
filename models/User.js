@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model, Types } = require('mongoose');
 
 // Schema to create User model
 const userSchema = new Schema(
@@ -7,12 +7,12 @@ const userSchema = new Schema(
         type: String,
         unique: true,
         trim: true,
-        required: "Username Required"
+        required: true
     },
     email: {
         type: String,
         unique: true,
-        required: "Username Required",
+        required: true,
         match: [/.+@.+\..+/]
     },
     thoughts: [

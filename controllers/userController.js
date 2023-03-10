@@ -9,7 +9,7 @@ module.exports = {
   },
   // Get single user
   getSingleUser(req, res) {
-    User.findOne({ _id: req.params.id })
+    User.findOne({ _id: req.params.userId })
       .select('-__v')
       .populate('friends')
       .populate('thoughts')
@@ -30,7 +30,7 @@ module.exports = {
 
 // Update user by ID
 updateUser(req, res) {
-    User.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true })
+    User.findOneAndUpdate({ _id: req.params.userId }, req.body, { new: true })
       .then((user) => {
         if (!user) {
           res.status(404).json({
@@ -51,7 +51,7 @@ updateUser(req, res) {
 
 // Delete user by ID & associated thoughts
 deleteUser(req, res) {
-    User.findOneAndDelete({ _id: req.params.id })
+    User.findOneAndDelete({ _id: req.params.userId })
       .then((user) =>
         !user
           ? res.status(404).json({ message: 'No user with that ID' })
